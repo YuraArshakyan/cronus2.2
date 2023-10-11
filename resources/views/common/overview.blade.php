@@ -13,7 +13,7 @@
             <div class="col-lg-5 text-center text-lg-start">
                 <div class="about-img">
                     @foreach($photos as $photo)
-                        <img src="assets/img/{{$photo->overview_photos}}" alt="">
+                        <img src="assets/img/{{$photo->photos}}" alt="">
                     @endforeach
                 </div>
             </div>
@@ -22,14 +22,18 @@
                     <div class="section-title">
                         <h5 class="textleft relative">about</h5>
                         <span>Since from 2000</span>
-                        @foreach($title as $title)
-                            <h2>{!!nl2br(str_replace(" ", "&nbsp;", $title->overview_title))!!}</h2>
+                        @foreach($title as $titles)
+                            @if($titles->id == 1)
+                                <h2>{!!nl2br(str_replace(" ", "&nbsp;", $titles->titles))!!}</h2>
+                            @endif
                         @endforeach
                     </div>
                 </div>
                 <div class="about-info-contents">
-                    @foreach($texts as $overview)
-                        <p>{!!nl2br(str_replace(" ", " &nbsp;", $overview->overview))!!}</p>
+                    @foreach($texts as $text)
+                        @if($text->id == 1)
+                            <p>{!!nl2br(str_replace(" ", " &nbsp;", $text->text))!!}</p>
+                        @endif
                     @endforeach
                 </div>
                 <div class="company-ceo d-flex align-items-center">

@@ -35,7 +35,13 @@ Route::get('/', function () {
 Route::get('/contact', function () {
     $config = configs::all();
     $texts = texts::all();
-    return view('contact', compact( 'texts', 'config'));
+    $title = titles::all();
+    $icone = array(
+        16 => 'fal fa-envelope',
+        17 => 'fal fa-arrow-right',
+        18 => 'fal fa-map-marker-alt',
+    );
+    return view('contact', compact( 'texts', 'config', 'title', 'icone'));
 })->name('contacts');
 
 Route::get('/head', function () {
@@ -76,7 +82,15 @@ Route::get('/services', function () {
     $title = titles::all();
     $texts = texts::all();
     $photos = photos::all();
-    return view('services', compact('title', 'texts', 'photos', 'config'));
+    $icone = array(
+       2 => 'flaticon-airplane-5',
+       3 => 'flaticon-ship-5',
+       4 => 'flaticon-truck-2',
+       5 => 'flaticon-subway',
+       6 => 'flaticon-food',
+       7 => 'flaticon-drone-2',
+    );
+    return view('services', compact('title', 'texts', 'photos', 'config', 'icone'));
 })->name('services');
 
 Route::get('/about', function () {

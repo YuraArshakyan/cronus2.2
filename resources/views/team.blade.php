@@ -27,12 +27,6 @@
         </div>
     </div>
 
-    @foreach($photos as $photo)
-    @endforeach
-    @foreach($title as $title)
-    @endforeach
-    @foreach($texts as $text)
-    @endforeach
     @include('common.Team')
 
     <section class="team-section section-padding section-bg">
@@ -47,94 +41,42 @@
             </div>
 
             <div class="row">
-                <div class="col-xl-3 col-md-6 col-12">
-                    <div class="single-team-member bg-cover" style="background-image: url('assets/img/team/{{$photo->team_5_photos}}')">
-                        <div class="member-details">
-                            <span>{{$title->team_5_position}}</span>
-                            <h3>{{$text->team_5}}</h3>
-                        </div>
-                        <div class="social-icons">
-                            <div class="plus-icon"><i class="fal fa-plus"></i></div>
-                            <div class="top">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                            </div>
-                            <div class="right">
-                                <a href="#"><i class="fab fa-behance"></i></a>
-                                <a href="#"><i class="fab fa-youtube"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    @auth
-                        <a href="{{url('edit/'. 4 . '/'. 5)}}" data-animation-in="fadeInRight" data-delay-in="0.8" class="theme-btn border-style me-sm-4 mt-4 animated" style="width: 100%; text-align: center">Edit</a>
-                    @endauth
-                </div>
-                <div class="col-xl-3 col-md-6 col-12">
-                    <div class="single-team-member bg-cover" style="background-image: url('assets/img/team/{{$photo->team_6_photos}}')">
-                        <div class="member-details">
-                            <span>{{$title->team_6_position}}</span>
-                            <h3>{{$text->team_6}}</h3>
-                        </div>
-                        <div class="social-icons">
-                            <div class="plus-icon"><i class="fal fa-plus"></i></div>
-                            <div class="top">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                            </div>
-                            <div class="right">
-                                <a href="#"><i class="fab fa-behance"></i></a>
-                                <a href="#"><i class="fab fa-youtube"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    @auth
-                        <a href="{{url('edit/'. 4 . '/'. 6)}}" data-animation-in="fadeInRight" data-delay-in="0.8" class="theme-btn border-style me-sm-4 mt-4 animated" style="width: 100%; text-align: center">Edit</a>
-                    @endauth
-                </div>
-                <div class="col-xl-3 col-md-6 col-12">
-                    <div class="single-team-member bg-cover" style="background-image: url('assets/img/team/{{$photo->team_7_photos}}')">
-                        <div class="member-details">
-                            <span>{{$title->team_7_position}}</span>
-                            <h3>{{$text->team_7}}</h3>
-                        </div>
-                        <div class="social-icons">
-                            <div class="plus-icon"><i class="fal fa-plus"></i></div>
-                            <div class="top">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                            </div>
-                            <div class="right">
-                                <a href="#"><i class="fab fa-behance"></i></a>
-                                <a href="#"><i class="fab fa-youtube"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    @auth
-                        <a href="{{url('edit/'. 4 . '/'. 7)}}" data-animation-in="fadeInRight" data-delay-in="0.8" class="theme-btn border-style me-sm-4 mt-4 animated" style="width: 100%; text-align: center">Edit</a>
-                    @endauth
-                </div>
-                <div class="col-xl-3 col-md-6 col-12">
-                    <div class="single-team-member bg-cover" style="background-image: url('assets/img/team/{{$photo->team_8_photos}}')">
-                        <div class="member-details">
-                            <span>{{$title->team_8_position}}</span>
-                            <h3>{{$text->team_8}}</h3>
-                        </div>
-                        <div class="social-icons">
-                            <div class="plus-icon"><i class="fal fa-plus"></i></div>
-                            <div class="top">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                            </div>
-                            <div class="right">
-                                <a href="#"><i class="fab fa-behance"></i></a>
-                                <a href="#"><i class="fab fa-youtube"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    @auth
-                        <a href="{{url('edit/'. 4 . '/'. 8)}}" data-animation-in="fadeInRight" data-delay-in="0.8" class="theme-btn border-style me-sm-4 mt-4 animated" style="width: 100%; text-align: center">Edit</a>
-                    @endauth
-                </div>
+                @for($i = 12; $i <= 15; $i++)
+                    @foreach($photos as $photo)
+                        @if($photo->id == $i)
+                            @foreach($title as $titles)
+                                @if($titles->id == $i)
+                                    @foreach($texts as $text)
+                                        @if($text->id == $i)
+                                            <div class="col-xl-3 col-md-6 col-12">
+                                                <div class="single-team-member bg-cover" style="background-image: url('assets/img/team/{{$photo->photos}}')">
+                                                    <div class="member-details">
+                                                        <span>{{$titles->titles}}</span>
+                                                        <h3>{{$text->text}}</h3>
+                                                    </div>
+                                                    <div class="social-icons">
+                                                        <div class="plus-icon"><i class="fal fa-plus"></i></div>
+                                                        <div class="top">
+                                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                                            <a href="#"><i class="fab fa-twitter"></i></a>
+                                                        </div>
+                                                        <div class="right">
+                                                            <a href="#"><i class="fab fa-behance"></i></a>
+                                                            <a href="#"><i class="fab fa-youtube"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                @auth
+                                                    <a href="{{url('edit/'. 4 . '/'. 5)}}" data-animation-in="fadeInRight" data-delay-in="0.8" class="theme-btn border-style me-sm-4 mt-4 animated" style="width: 100%; text-align: center">Edit</a>
+                                                @endauth
+                                            </div>
+                                        @endif
+                                    @endforeach
+                                @endif
+                            @endforeach
+                        @endif
+                    @endforeach
+                @endfor
             </div>
         </div>
     </section>

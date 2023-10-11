@@ -13,27 +13,7 @@ return new class extends Migration
     {
         Schema::create('photos', function (Blueprint $table) {
             $table->id();
-            $table->text('overview_photos');
-            $table->text('what_we_do_1_photos');
-            $table->text('what_we_do_2_photos');
-            $table->text('what_we_do_3_photos');
-            $table->text('what_we_do_4_photos');
-            $table->text('what_we_do_5_photos');
-            $table->text('what_we_do_6_photos');
-            $table->text('team_1_photos');
-            $table->text('team_2_photos');
-            $table->text('team_3_photos');
-            $table->text('team_4_photos');
-            $table->text('team_5_photos');
-            $table->text('team_6_photos');
-            $table->text('team_7_photos');
-            $table->text('team_8_photos');
-            $table->text('services_1_photos');
-            $table->text('services_2_photos');
-            $table->text('services_3_photos');
-            $table->text('services_4_photos');
-            $table->text('services_5_photos');
-            $table->text('services_6_photos');
+            $table->text('photos');
             $table->timestamps();
         });
     }

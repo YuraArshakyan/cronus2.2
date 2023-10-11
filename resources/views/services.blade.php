@@ -26,10 +26,6 @@
             </nav>
         </div>
     </div>
-
-    @foreach($photos as $photo)
-    @foreach($texts as $text)
-    @foreach($title as $titles)
     <section class="our-service-provide section-padding theme-bg">
         <div class="container">
             <div class="col-12 col-lg-12 mb-40">
@@ -41,104 +37,39 @@
                     </div>
                 </div>
             </div>
-
             <div class="row text-center">
-                <div class="col-xl-4 col-md-6 col-12">
-                    <div class="single-our-service">
-                        <div class="thumb bg-cover" style="background-image: url('assets/img/services/{{$photo->services_1_photos}}')"></div>
-                        <div class="content">
-                            <div class="icon">
-                                <i class="flaticon-airplane-5"></i>
-                            </div>
-                            <h3><a href="services-details.html">{{$titles->what_we_do_1_title}}</a></h3>
-                            <p>{{$text->what_we_do_1}}</p>
-                        </div>
-                    </div>
-                    @auth()
-                        <a href="{{url('edit/'. 3 . '/'. 1)}}" data-animation-in="fadeInRight" data-delay-in="0.8" class="theme-btn border-style me-sm-4 mt-4 animated" style="width: 100%; text-align: center">Edit</a>
-                    @endauth
-                </div>
-                <div class="col-xl-4 col-md-6 col-12">
-                    <div class="single-our-service">
-                        <div class="thumb bg-cover" style="background-image: url('assets/img/services/{{$photo->services_2_photos}}')"></div>
-                        <div class="content">
-                            <div class="icon">
-                                <i class="flaticon-ship-5"></i>
-                            </div>
-                            <h3><a href="services-details.html">{{$titles->what_we_do_2_title}}</a></h3>
-                            <p>{{$text->what_we_do_2}}</p>
-                        </div>
-                    </div>
-                    @auth()
-                        <a href="{{url('edit/'. 3 . '/'. 2)}}" data-animation-in="fadeInRight" data-delay-in="0.8" class="theme-btn border-style me-sm-4 mt-4 animated" style="width: 100%; text-align: center">Edit</a>
-                    @endauth
-                </div>
-                <div class="col-xl-4 col-md-6 col-12">
-                    <div class="single-our-service">
-                        <div class="thumb bg-cover" style="background-image: url('assets/img/services/{{$photo->services_3_photos}}')"></div>
-                        <div class="content">
-                            <div class="icon">
-                                <i class="flaticon-truck-2"></i>
-                            </div>
-                            <h3><a href="services-details.html">{{$titles->what_we_do_3_title}}</a></h3>
-                            <p>{{$text->what_we_do_3}}</p>
-                        </div>
-                    </div>
-                    @auth()
-                        <a href="{{url('edit/'. 3 . '/'. 3)}}" data-animation-in="fadeInRight" data-delay-in="0.8" class="theme-btn border-style me-sm-4 mt-4 animated" style="width: 100%; text-align: center">Edit</a>
-                    @endauth
-                </div>
-                <div class="col-xl-4 col-md-6 col-12">
-                    <div class="single-our-service">
-                        <div class="thumb bg-cover" style="background-image: url('assets/img/services/{{$photo->services_4_photos}}')"></div>
-                        <div class="content">
-                            <div class="icon">
-                                <i class="flaticon-subway"></i>
-                            </div>
-                            <h3><a href="services-details.html">{{$titles->what_we_do_4_title}}</a></h3>
-                            <p>{{$text->what_we_do_3}}</p>
-                        </div>
-                    </div>
-                    @auth()
-                        <a href="{{url('edit/'. 3 . '/'. 6)}}" data-animation-in="fadeInRight" data-delay-in="0.8" class="theme-btn border-style me-sm-4 mt-4 animated" style="width: 100%; text-align: center">Edit</a>
-                    @endauth
-                </div>
-                <div class="col-xl-4 col-md-6 col-12">
-                    <div class="single-our-service">
-                        <div class="thumb bg-cover" style="background-image: url('assets/img/services/{{$photo->services_5_photos}}')"></div>
-                        <div class="content">
-                            <div class="icon">
-                                <i class="flaticon-food"></i>
-                            </div>
-                            <h3><a href="services-details.html">{{$titles->what_we_do_5_title}}</a></h3>
-                            <p>{{$text->what_we_do_5}}</p>
-                        </div>
-                    </div>
-                    @auth()
-                        <a href="{{url('edit/'. 3 . '/'. 4)}}" data-animation-in="fadeInRight" data-delay-in="0.8" class="theme-btn border-style me-sm-4 mt-4 animated" style="width: 100%; text-align: center">Edit</a>
-                    @endauth
-                </div>
-                <div class="col-xl-4 col-md-6 col-12">
-                    <div class="single-our-service">
-                        <div class="thumb bg-cover" style="background-image: url('assets/img/services/{{$photo->services_6_photos}}')"></div>
-                        <div class="content">
-                            <div class="icon">
-                                <i class="flaticon-drone-2"></i>
-                            </div>
-                            <h3><a href="services-details.html">{{$titles->what_we_do_6_title}}</a></h3>
-                            <p>{{$text->what_we_do_6}}</p>
-                        </div>
-                    </div>
-                    @auth()
-                        <a href="{{url('edit/'. 3 . '/'. 5)}}" data-animation-in="fadeInRight" data-delay-in="0.8" class="theme-btn border-style me-sm-4 mt-4 animated" style="width: 100%; text-align: center">Edit</a>
-                    @endauth
-                </div>
+                @for($i = 2; $i <= 7; $i++)
+                    @foreach($photos as $photo)
+                        @if($photo->id == $i)
+                            @foreach($texts as $text)
+                                @if($text->id == $i)
+                                    @foreach($title as $titles)
+                                        @if($titles->id == $i)
+                                            <div class="col-xl-4 col-md-6 col-12">
+                                                <div class="single-our-service">
+                                                    <div class="thumb bg-cover" style="background-image: url('assets/img/services/{{$photo->photos}}')"></div>
+                                                    <div class="content">
+                                                        <div class="icon">
+                                                            <i class="{{$icone[$i]}}"></i>
+                                                        </div>
+                                                        <h3><a href="services-details.html">{{$titles->titles}}</a></h3>
+                                                        <p>{{$text->text}}</p>
+                                                    </div>
+                                                </div>
+                                                @auth()
+                                                    <a href="{{url('edit/'. 3 . '/'. 5)}}" data-animation-in="fadeInRight" data-delay-in="0.8" class="theme-btn border-style me-sm-4 mt-4 animated" style="width: 100%; text-align: center">Edit</a>
+                                                @endauth
+                                            </div>
+                                        @endif
+                                    @endforeach
+                                @endif
+                            @endforeach
+                        @endif
+                    @endforeach
+                @endfor
             </div>
         </div>
     </section>
-    @endforeach
-    @endforeach
-    @endforeach
 
     <section class="work-process-wrapper section-padding">
         <div class="container">

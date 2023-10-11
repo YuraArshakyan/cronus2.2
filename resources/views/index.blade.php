@@ -80,7 +80,7 @@
     @foreach($photos as $photo)
     @endforeach
     @include('common.overview')
-    @foreach($title as $title)
+    @foreach($texts as $text)
     @endforeach
 
     <section class="our-service-wrapper fix theme-bg section-padding">
@@ -102,78 +102,27 @@
             </div>
             <div class="col-md-12 col-12">
                 <div class="services-carousel-active">
-                    <div class="single-service-card">
-                        <div class="service-banner-img bg-cover" style="background-image: url('assets/img/services/{{$photo->what_we_do_1_photos}}')"></div>
-                        <div class="content">
-                            <h3><a href="services-details.html">{{$title->what_we_do_1_title}}</a></h3>
-                            @foreach($texts as $text)
-                                <p>{{$text->what_we_do_1}}</p>
-                            @endforeach
-                        </div>
-                        @auth()
-                            <a href="{{url('edit/'. 3 . '/'. 1)}}" data-animation-in="fadeInRight" data-delay-in="0.8" class="theme-btn border-style me-sm-4 mt-4 animated" style="width: 100%; text-align: center">Edit</a>
-                        @endauth
-                    </div>
-                    <div class="single-service-card">
-                        <div class="service-banner-img bg-cover" style="background-image: url('assets/img/services/{{$photo->what_we_do_2_photos}}')"></div>
-                        <div class="content">
-                            <h3><a href="services-details.html">{{$title->what_we_do_2_title}}</a></h3>
-                            @foreach($texts as $text)
-                                <p>{{$text->what_we_do_2}}</p>
-                            @endforeach
-                        </div>
-                        @auth()
-                            <a href="{{url('edit/'. 3 . '/'. 2)}}" data-animation-in="fadeInRight" data-delay-in="0.8" class="theme-btn border-style me-sm-4 mt-4 animated" style="width: 100%; text-align: center">Edit</a>
-                        @endauth
-                    </div>
-                    <div class="single-service-card">
-                        <div class="service-banner-img bg-cover" style="background-image: url('assets/img/services/{{$photo->what_we_do_3_photos}}')"></div>
-                        <div class="content">
-                            <h3><a href="services-details.html">{{$title->what_we_do_3_title}}</a></h3>
-                            @foreach($texts as $text)
-                                <p>{{$text->what_we_do_3}}</p>
-                            @endforeach
-                        </div>
-                        @auth()
-                            <a href="{{url('edit/'. 3 . '/'. 3)}}" data-animation-in="fadeInRight" data-delay-in="0.8" class="theme-btn border-style me-sm-4 mt-4 animated" style="width: 100%; text-align: center">Edit</a>
-                        @endauth
-                    </div>
-                    <div class="single-service-card">
-                        <div class="service-banner-img bg-cover" style="background-image: url('assets/img/services/{{$photo->what_we_do_4_photos}}')"></div>
-                        <div class="content">
-                            <h3><a href="services-details.html">{{$title->what_we_do_4_title}}</a></h3>
-                            @foreach($texts as $text)
-                                <p>{{$text->what_we_do_4}}</p>
-                            @endforeach
-                        </div>
-                        @auth()
-                            <a href="{{url('edit/'. 3 . '/'. 4)}}" data-animation-in="fadeInRight" data-delay-in="0.8" class="theme-btn border-style me-sm-4 mt-4 animated" style="width: 100%; text-align: center">Edit</a>
-                        @endauth
-                    </div>
-                    <div class="single-service-card">
-                        <div class="service-banner-img bg-cover" style="background-image: url('assets/img/services/{{$photo->what_we_do_5_photos}}')"></div>
-                        <div class="content">
-                            <h3><a href="services-details.html">{{$title->what_we_do_5_title}}</a></h3>
-                            @foreach($texts as $text)
-                                <p>{{$text->what_we_do_5}}</p>
-                            @endforeach
-                        </div>
-                        @auth()
-                            <a href="{{url('edit/'. 3 . '/'. 5)}}" data-animation-in="fadeInRight" data-delay-in="0.8" class="theme-btn border-style me-sm-4 mt-4 animated" style="width: 100%; text-align: center">Edit</a>
-                        @endauth
-                    </div>
-                    <div class="single-service-card">
-                        <div class="service-banner-img bg-cover" style="background-image: url('assets/img/services/{{$photo->what_we_do_6_photos}}')"></div>
-                        <div class="content">
-                            <h3><a href="services-details.html">{{$title->what_we_do_6_title}}</a></h3>
-                            @foreach($texts as $text)
-                                <p>{{$text->what_we_do_6}}</p>
-                            @endforeach
-                        </div>
-                        @auth()
-                            <a href="{{url('edit/'. 3 . '/'. 6)}}" data-animation-in="fadeInRight" data-delay-in="0.8" class="theme-btn border-style me-sm-4 mt-4 animated" style="width: 100%; text-align: center">Edit</a>
-                        @endauth
-                    </div>
+                    @for($i = 2; $i <= 7; $i++)
+                        @foreach($photos as $photo)
+                            @if($photo->id == $i)
+                                @foreach($title as $titles)
+                                    @if($titles->id == $i)
+                                        @foreach($texts as $text)
+                                            @if($text->id == $i)
+                                                <div class="single-service-card">
+                                                    <div class="service-banner-img bg-cover" style="background-image: url('assets/img/services/{{$photo->photos}}')"></div>
+                                                    <div class="content">
+                                                        <h3><a href="services-details.html">{{$titles->titles}}</a></h3>
+                                                            <p>{{$text->text}}</p>
+                                                    </div>
+                                                </div>
+                                            @endif
+                                        @endforeach
+                                    @endif
+                                @endforeach
+                            @endif
+                        @endforeach
+                    @endfor
                 </div>
             </div>
         </div>

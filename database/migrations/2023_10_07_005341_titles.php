@@ -13,33 +13,7 @@ return new class extends Migration
     {
         Schema::create('titles', function (Blueprint $table) {
             $table->id();
-            $table->text('overview_title');
-            $table->text('what_we_do_1_title');
-            $table->text('what_we_do_2_title');
-            $table->text('what_we_do_3_title');
-            $table->text('what_we_do_4_title');
-            $table->text('what_we_do_5_title');
-            $table->text('what_we_do_6_title');
-            $table->integer('prices_1_title');
-            $table->integer('prices_2_title');
-            $table->integer('prices_3_title');
-            $table->integer('prices_4_title');
-            $table->integer('prices_5_title');
-            $table->integer('prices_6_title');
-            $table->text('team_1_position');
-            $table->text('team_2_position');
-            $table->text('team_3_position');
-            $table->text('team_4_position');
-            $table->text('team_5_position');
-            $table->text('team_6_position');
-            $table->text('team_7_position');
-            $table->text('team_8_position');
-            $table->text('services_1_title');
-            $table->text('services_2_title');
-            $table->text('services_3_title');
-            $table->text('services_4_title');
-            $table->text('services_5_title');
-            $table->text('services_6_title');
+            $table->text('titles');
             $table->timestamps();
         });
     }

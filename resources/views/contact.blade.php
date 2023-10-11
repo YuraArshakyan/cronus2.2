@@ -27,84 +27,42 @@
         </div>
     </div>
 
-    @foreach($texts as $text)
     <section class="contact-page-wrap section-padding">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="single-contact-card card1">
-                        <div class="top-part">
-                            <div class="icon">
-                                <i class="fal fa-envelope"></i>
-                            </div>
-                            <div class="title">
-                                <h4>Email Address</h4>
-                                <span>Sent mail asap anytime</span>
-                            </div>
-                        </div>
-                        <div class="bottom-part">
-                            <div class="info">
-                                <p>{{$text->contact_email_1}}</p>
-                                <p>{{$text->contact_email_2}}</p>
-                            </div>
-                            <div class="icon">
-                                <i class="fal fa-arrow-right"></i>
-                            </div>
-                        </div>
-                        @auth
-                            <a href="{{url('edit/'. 5 . '/'. 1)}}" data-animation-in="fadeInRight" data-delay-in="0.8" class="theme-btn border-style me-sm-4 mt-4 animated" style="width: 100%; text-align: center">Edit</a>
-                        @endauth
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="single-contact-card card2">
-                        <div class="top-part">
-                            <div class="icon">
-                                <i class="fal fa-phone"></i>
-                            </div>
-                            <div class="title">
-                                <h4>Phone Number</h4>
-                                <span>call us asap anytime</span>
-                            </div>
-                        </div>
-                        <div class="bottom-part">
-                            <div class="info">
-                                <p>{{$text->contact_phone_1}}</p>
-                                <p>{{$text->contact_phone_2}}</p>
-                            </div>
-                            <div class="icon">
-                                <i class="fal fa-arrow-right"></i>
-                            </div>
-                        </div>
-                        @auth
-                            <a href="{{url('edit/'. 5 . '/'. 2)}}" data-animation-in="fadeInRight" data-delay-in="0.8" class="theme-btn border-style me-sm-4 mt-4 animated" style="width: 100%; text-align: center">Edit</a>
-                        @endauth
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="single-contact-card card3">
-                        <div class="top-part">
-                            <div class="icon">
-                                <i class="fal fa-map-marker-alt"></i>
-                            </div>
-                            <div class="title">
-                                <h4>Office Address</h4>
-                                <span>Sent mail asap anytime</span>
-                            </div>
-                        </div>
-                        <div class="bottom-part">
-                            <div class="info">
-                                <p>{!! nl2br(str_replace(" ", "&nbsp;", $text->contact_location)) !!}</p>
-                            </div>
-                            <div class="icon">
-                                <i class="fal fa-arrow-right"></i>
-                            </div>
-                        </div>
-                        @auth
-                            <a href="{{url('edit/'. 5 . '/'. 3)}}" data-animation-in="fadeInRight" data-delay-in="0.8" class="theme-btn border-style me-sm-4 mt-4 animated" style="width: 100%; text-align: center">Edit</a>
-                        @endauth
-                    </div>
-                </div>
+                @for($i = 16; $i <= 18; $i++)
+                    @foreach($texts as $text)
+                        @if($text->id == $i)
+                            @foreach($title as $titles)
+                                @if($titles->id == $i)
+                                <div class="col-lg-4 col-md-6 col-12">
+                                    <div class="single-contact-card card1">
+                                            <div class="top-part">
+                                                <div class="icon">
+                                                    <i class="{{$icone[$i]}}"></i>
+                                                </div>
+                                                <div class="title">
+                                                    <h4>{{$titles->titles}}</h4>
+                                                </div>
+                                            </div>
+                                            <div class="bottom-part">
+                                                <div class="info">
+                                                    <p>{!!nl2br(str_replace(" ", "&nbsp;", $text->text))!!}</p>
+                                                </div>
+                                                <div class="icon">
+                                                    <i class="fal fa-arrow-right"></i>
+                                                </div>
+                                            </div>
+                                            @auth
+                                                <a href="{{url('edit/'. 5 . '/'. 1)}}" data-animation-in="fadeInRight" data-delay-in="0.8" class="theme-btn border-style me-sm-4 mt-4 animated" style="width: 100%; text-align: center">Edit</a>
+                                            @endauth
+                                        </div>
+                                    </div>
+                                @endif
+                            @endforeach
+                        @endif
+                    @endforeach
+                @endfor
             </div>
 
             <div class="row pt-5">
@@ -158,11 +116,9 @@
             </div>
         </div>
     </section>
-    @endforeach
 
     <section class="our-branch-wrapper section-padding pt-0">
         <div class="office-google-map-wrapper wow fadeInUp">
-
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6678.7619084840835!2d144.9618311901502!3d-37.81450084255415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642b4758afc1d%3A0x3119cc820fdfc62e!2sEnvato!5e0!3m2!1sen!2sbd!4v1641984054261!5m2!1sen!2sbd" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>

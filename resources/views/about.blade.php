@@ -120,7 +120,7 @@
         </div>
     </section>
 
-    @foreach($title as $title)
+    @foreach($title as $titles)
     @endforeach
     @include('common.Team')
 

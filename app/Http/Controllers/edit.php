@@ -34,7 +34,38 @@ class edit extends Controller
     public function update($id, $id2, Request $request){
         switch ($id){
             case 1:
+                $final_name1 = 'slide1.jpg';
+                $final_name2 = 'slide2.jpg';
+                $final_name3 = 'slide3.jpg';
+                $final_name4 = 'slide4.jpg';
+                if ($request->hasFile('slide1')){
+                    $request->file('slide1')->move(public_path('assets/img/home1/'), $final_name1);
 
+                    $carousel_img = carousel_imgs::get('id', 1)->first();
+                    $carousel_img->img = $final_name1;
+                    $carousel_img->update();
+                }
+                if ($request->hasFile('slide2')){
+                    $request->file('slide2')->move(public_path('assets/img/home1/'), $final_name2);
+
+                    $carousel_img = carousel_imgs::get('id', 2)->first();
+                    $carousel_img->img = $final_name2;
+                    $carousel_img->update();
+                }
+                if ($request->hasFile('slide3')){
+                    $request->file('slide3')->move(public_path('assets/img/home1/'), $final_name3);
+
+                    $carousel_img = carousel_imgs::where('id', 3);
+                    $carousel_img->img = $final_name3;
+                }
+                if ($request->hasFile('slide4')){
+                    $request->file('slide4')->move(public_path('assets/img/home1/'), $final_name4);
+
+                    $carousel_img = carousel_imgs::get('id', 4)->first();
+                    $carousel_img->img = $final_name4;
+                    $carousel_img->update();
+                }
+                return redirect()->back()->with('status', 'your data has been saved');
             case 2:
                 if($request->hasFile('overview_img')){
                     $data = $request->all();

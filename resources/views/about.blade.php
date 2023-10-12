@@ -130,7 +130,7 @@
         <div class="container">
             <div class="col-12 text-center mb-20 mtm-20">
                 <div class="mask-outline bg-center" style="background-image: url('assets/img/mask-bg.jpg')">
-                    <h1>20,8700</h1>
+                    <h1>{{round(9000+(time()-1696969084)/10800)}}</h1>
                 </div>
                 <h6 class="mt-4">All-over delivery done by our team</h6>
             </div>

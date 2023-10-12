@@ -7,7 +7,7 @@
     <!-- ======== Page title ============ -->
     <title>@foreach($config as $item)@if($item->id == 4){{$item->value}}@endif @endforeach</title>
     <!-- ========== Favicon Icon ========== -->
-    <link rel="shortcut icon" href="/assets/img/favicon.png">
+    <link rel="shortcut icon" href="/assets/img/favicon.ico">
     <!-- ===========  All Stylesheet ================= -->
     <!--  Icon css plugins -->
     <link rel="stylesheet" href="assets/css/icons.css">

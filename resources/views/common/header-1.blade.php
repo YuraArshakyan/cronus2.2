@@ -12,26 +12,26 @@
                         </button>
                         <nav class="sidebar-nav">
                             <ul class="metismenu" id="mobile-menu">
-                                <li><a class="has-arrow" href="#">Homes</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="index.html">Homepage 1</a></li>
-                                        <li><a href="index-2.html">Homepage 2</a></li>
-                                        <li><a href="index-3.html">Homepage 3</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="about.html">about</a></li>
+                                <li><a href="/">Homes</a></li>
+                                <li><a href="{{route('services')}}">about</a></li>
                                 <li><a href="services.html">services</a></li>
                                 <li>
                                     <a class="has-arrow" href="#">Pages</a>
                                     <ul class="sub-menu">
-                                        <li><a href="faq.html">faq</a></li>
-                                        <li><a href="services-details.html">services details</a></li>
-                                        <li><a href="team.html">Team</a></li>
-                                        <li><a href="404.html">404</a></li>
+                                        <li><a href="{{route('faq')}}">faq</a></li>
+                                        <li><a href="{{route('team')}}">Team</a></li>
+                                        <li><a href="{{route('pricing')}}">pricing</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="news.html">News</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="{{route('news')}}">News</a></li>
+                                <li><a href="{{route('contacts')}}">Contact</a></li>
+                                @auth()
+                                    <li><a href="#">Admin<i class="fas fa-angle-down"></i></a>
+                                        <ul class="sub-menu">
+                                            <li><a href="{{route('admin.logout')}}">Log out</a></li>
+                                            <li><a href="{{route('edit_config')}}">change config</a></li>
+                                        </ul>
+                                @endauth
                             </ul>
                         </nav>
 

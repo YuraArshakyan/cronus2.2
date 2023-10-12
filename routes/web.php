@@ -21,63 +21,106 @@ use App\Models\configs;
 */
 
 Route::get('/', function () {
-    $slides = array(
-        "slide1" => carousel_imgs::where('id', 1)->get(),
-        "slide2" => carousel_imgs::where('id', 2)->get(),
+    $topbar = array(
+        1 => configs::where('id', 5)->get(),
+        2 => configs::where('id', 6)->get(),
+        3 => configs::where('id', 7)->get(),
     );
+    $slider = carousel_imgs::all();
     $title = titles::all();
     $texts = texts::all();
     $photos = photos::all();
     $config = configs::all();
-    return view('index',compact('slides','title', 'texts', 'photos', 'config'));
+    return view('index',compact('title', 'texts', 'photos', 'config', 'slider', 'topbar'));
 });
 
 Route::get('/contact', function () {
-    $config = configs::all();
+    $topbar = array(
+        1 => configs::where('id', 5)->get(),
+        2 => configs::where('id', 6)->get(),
+        3 => configs::where('id', 7)->get(),
+    );
+    $config = configs::where('id', 2)->get();
+    $config2 = configs::where('id', 3)->get();
     $texts = texts::all();
     $title = titles::all();
     $icone = array(
         16 => 'fal fa-envelope',
-        17 => 'fal fa-arrow-right',
+        17 => 'fal fa-phone',
         18 => 'fal fa-map-marker-alt',
     );
-    return view('contact', compact( 'texts', 'config', 'title', 'icone'));
+    return view('contact', compact( 'texts', 'config', 'config2', 'title', 'icone', 'topbar'));
 })->name('contacts');
 
 Route::get('/head', function () {
+    $topbar = array(
+        1 => configs::where('id', 5)->get(),
+        2 => configs::where('id', 6)->get(),
+        3 => configs::where('id', 7)->get(),
+    );
     $config = configs::all();
-    return view('head', compact( 'config'));
+    return view('head', compact( 'config', 'topbar'));
 })->name('head');
 
 Route::get('/news', function () {
+    $topbar = array(
+        1 => configs::where('id', 5)->get(),
+        2 => configs::where('id', 6)->get(),
+        3 => configs::where('id', 7)->get(),
+    );
     $config = configs::all();
-    return view('news', compact('config'));
+    return view('news', compact('config', 'topbar'));
 })->name('news');
 
 Route::get('/faq', function () {
+    $topbar = array(
+        1 => configs::where('id', 5)->get(),
+        2 => configs::where('id', 6)->get(),
+        3 => configs::where('id', 7)->get(),
+    );
     $config = configs::all();
-    return view('faq', compact('config'));
+    return view('faq', compact('config', 'topbar'));
 })->name('faq');
 
 Route::get('/team', function () {
+    $topbar = array(
+        1 => configs::where('id', 5)->get(),
+        2 => configs::where('id', 6)->get(),
+        3 => configs::where('id', 7)->get(),
+    );
     $config = configs::all();
     $title = titles::all();
     $texts = texts::all();
     $photos = photos::all();
-    return view('team', compact('title', 'texts', 'photos', 'config'));
+    return view('team', compact('title', 'texts', 'photos', 'config', 'topbar'));
 })->name('team');
 
 Route::get('/pricing', function () {
+    $topbar = array(
+        1 => configs::where('id', 5)->get(),
+        2 => configs::where('id', 6)->get(),
+        3 => configs::where('id', 7)->get(),
+    );
     $config = configs::all();
-    return view('pricing', compact('config'));
+    return view('pricing', compact('config', 'topbar'));
 })->name('pricing');
 
 Route::get('/404', function () {
+    $topbar = array(
+        1 => configs::where('id', 5)->get(),
+        2 => configs::where('id', 6)->get(),
+        3 => configs::where('id', 7)->get(),
+    );
     $config = configs::all();
-    return view('404',compact('config'));
+    return view('404',compact('config', 'topbar'));
 })->name('404');
 
 Route::get('/services', function () {
+    $topbar = array(
+        1 => configs::where('id', 5)->get(),
+        2 => configs::where('id', 6)->get(),
+        3 => configs::where('id', 7)->get(),
+    );
     $config = configs::all();
     $title = titles::all();
     $texts = texts::all();
@@ -90,20 +133,30 @@ Route::get('/services', function () {
        6 => 'flaticon-food',
        7 => 'flaticon-drone-2',
     );
-    return view('services', compact('title', 'texts', 'photos', 'config', 'icone'));
+    return view('services', compact('title', 'texts', 'photos', 'config', 'icone', 'topbar'));
 })->name('services');
 
 Route::get('/about', function () {
+    $topbar = array(
+        1 => configs::where('id', 5)->get(),
+        2 => configs::where('id', 6)->get(),
+        3 => configs::where('id', 7)->get(),
+    );
     $config = configs::all();
     $title = titles::all();
     $texts = texts::all();
     $photos = photos::all();
-    return view('about', compact('title', 'texts', 'photos', 'config'));
+    return view('about', compact('title', 'texts', 'photos', 'config', 'topbar'));
 })->name('about');
 
 Route::get('/A_log', function () {
+    $topbar = array(
+        1 => configs::where('id', 5)->get(),
+        2 => configs::where('id', 6)->get(),
+        3 => configs::where('id', 7)->get(),
+    );
     $config = configs::all();
-    return view('A_log', compact('config'));
+    return view('A_log', compact('config', 'topbar'));
 });
 Route::controller(admin::class)->group(function (){
     Route::get('login', [admin::class, 'login'])->name('admin.login');
@@ -112,8 +165,13 @@ Route::controller(admin::class)->group(function (){
 });
 
 Route::get('/edit_config', function () {
+    $topbar = array(
+        1 => configs::where('id', 5)->get(),
+        2 => configs::where('id', 6)->get(),
+        3 => configs::where('id', 7)->get(),
+    );
     $config = configs::all();
-    return view('edit_config', compact('config'));
+    return view('edit_config', compact('config', 'topbar'));
 })->name('edit_config');
 
 Route::controller(edit::class)->group(function (){

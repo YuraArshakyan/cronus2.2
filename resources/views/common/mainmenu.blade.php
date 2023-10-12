@@ -18,7 +18,6 @@
                         <li><a href="{{route('faq')}}">faq</a></li>
                         <li><a href="{{route('team')}}">team</a></li>
                         <li><a href="{{route('pricing')}}">pricing</a></li>
-                        <li><a href="{{route('404')}}">404</a></li>
                     </ul>
                 </li>
                 <li><a href="{{route('news')}}">News</a></li>

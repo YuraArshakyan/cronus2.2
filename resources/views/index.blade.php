@@ -22,53 +22,57 @@
             </div>
         @endauth
         <div class="hero-slider-active transland-dots">
-            <div class="single-slide">
-                <div class="slide-bg bg-cover wow zoomIn" style="background-image: url('assets/img/home1/@foreach($slides['slide1'] as $img){{$img->img}}@endforeach');">
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-xxl-6 col-lg-8 col-sm-10">
-                            <div class="hero-contents pe-lg-3 text-white">
-                                <h1 class="fs-lg animated" data-animation-in="fadeInRight" data-delay-in="0.2">Innovative
-                                    thing <span>Provide</span></h1>
-                                <p class="pe-lg-5 mb-4 animated" data-animation-in="fadeInRight" data-delay-in="0.5">We are committed to providing our customers with exceptional service while offering our employees </p>
-                                <a href="{{route('contacts')}}" data-animation-in="fadeInRight" data-delay-in="0.8" class="theme-btn border-style me-sm-4 mt-4 animated">Track your order</a>
+            @foreach($slider as $slider)
+                <div class="single-slide">
+                    <div class="slide-bg bg-cover wow zoomIn" style="background-image: url('assets/img/home1/{{$slider->img}}');">
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-xxl-6 col-lg-8 col-sm-10">
+                                <div class="hero-contents pe-lg-3 text-white">
+                                    <h1 class="fs-lg animated" data-animation-in="fadeInRight" data-delay-in="0.2">Innovative
+                                        thing <span>Provide</span></h1>
+                                    <p class="pe-lg-5 mb-4 animated" data-animation-in="fadeInRight" data-delay-in="0.5">We are committed to providing our customers with exceptional service while offering our employees </p>
+                                    <a href="{{route('contacts')}}" data-animation-in="fadeInRight" data-delay-in="0.8" class="theme-btn border-style me-sm-4 mt-4 animated">Track your order</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="slide-pop-video-box-wrapper d-flex text-white align-items-center" data-animation-in="fadeInRight" data-delay-in="1s">
-                    <div class="text col-6">
-                        <h6>We're thriving and building better</h6>
-                    </div>
-                    <div class="video-wrapper bg-overlay bg-cover bg-center col-6 justify-content-center align-items-center" style="background-image: url('assets/img/faq-video-pup.jpg')">
-                        <a href="https://www.youtube.com/watch?v=E1xkXZs0cAQ" class="popup-video play-video"><i class="fas fa-play"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="single-slide">
-                <div class="slide-bg bg-cover" style="background-image: url('assets/img/home1/@foreach($slides['slide2'] as $img){{$img->img}}@endforeach');">
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-xxl-6 col-lg-8 col-sm-10">
-                            <div class="hero-contents pe-lg-3 text-white">
-                                <h1 class="fs-lg animated" data-animation-in="fadeInRight" data-delay-in="0.2">best Logistics in the <span>World</span></h1>
-                                <p class="pe-lg-5 mb-4" data-animation-in="fadeInRight" data-delay-in="0.5">We are committed to providing our customers with exceptional service while offering our employees </p>
-                                <a href="{{route('contacts')}}" data-animation-in="fadeInRight" data-delay-in="0.8" class="theme-btn border-style me-sm-4 mt-4">Track your order</a>
-                            </div>
+                    <div class="slide-pop-video-box-wrapper d-flex text-white align-items-center" data-animation-in="fadeInRight" data-delay-in="1s">
+                        <div class="text col-6">
+                            <h6>We're thriving and building better</h6>
+                        </div>
+                        <div class="video-wrapper bg-overlay bg-cover bg-center col-6 justify-content-center align-items-center" style="background-image: url('assets/img/faq-video-pup.jpg')">
+                            <a href="https://www.youtube.com/watch?v=E1xkXZs0cAQ" class="popup-video play-video"><i class="fas fa-play"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="slide-pop-video-box-wrapper d-flex text-white align-items-center" data-animation-in="fadeInRight" data-delay-in="1s">
-                    <div class="text col-6">
-                        <h6>We're thriving and building better</h6>
+            @endforeach
+                @if($slider->img != $slider->img)
+                    <div class="single-slide">
+                        <div class="slide-bg bg-cover" style="background-image: url('assets/img/home1/{{$slider->img}}');">
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-xxl-6 col-lg-8 col-sm-10">
+                                    <div class="hero-contents pe-lg-3 text-white">
+                                        <h1 class="fs-lg animated" data-animation-in="fadeInRight" data-delay-in="0.2">best Logistics in the <span>World</span></h1>
+                                        <p class="pe-lg-5 mb-4" data-animation-in="fadeInRight" data-delay-in="0.5">We are committed to providing our customers with exceptional service while offering our employees </p>
+                                        <a href="{{route('contacts')}}" data-animation-in="fadeInRight" data-delay-in="0.8" class="theme-btn border-style me-sm-4 mt-4">Track your order</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide-pop-video-box-wrapper d-flex text-white align-items-center" data-animation-in="fadeInRight" data-delay-in="1s">
+                            <div class="text col-6">
+                                <h6>We're thriving and building better</h6>
+                            </div>
+                            <div class="video-wrapper bg-overlay bg-cover bg-center col-6 justify-content-center align-items-center" style="background-image: url('assets/img/faq-video-pup.jpg')">
+                                <a href="https://www.youtube.com/watch?v=E1xkXZs0cAQ" class="popup-video play-video"><<i class="fas fa-play">></i></a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="video-wrapper bg-overlay bg-cover bg-center col-6 justify-content-center align-items-center" style="background-image: url('assets/img/faq-video-pup.jpg')">
-                        <a href="https://www.youtube.com/watch?v=E1xkXZs0cAQ" class="popup-video play-video"><<i class="fas fa-play">></i></a>
-                    </div>
-                </div>
-            </div>
+                @endif
         </div>
         <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
             <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="44px" height="44px" id="circle" fill="none" stroke="currentColor">
@@ -115,6 +119,9 @@
                                                         <h3><a href="services-details.html">{{$titles->titles}}</a></h3>
                                                             <p>{{$text->text}}</p>
                                                     </div>
+                                                    @auth()
+                                                        <a href="{{url('edit/'. 3 . '/'. $i)}}" data-animation-in="fadeInRight" data-delay-in="0.8" class="theme-btn border-style me-sm-4 mt-4 animated" style="width: 100%; text-align: center">Edit</a>
+                                                    @endauth
                                                 </div>
                                             @endif
                                         @endforeach

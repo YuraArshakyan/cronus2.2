@@ -17,11 +17,11 @@
                             <h6>Our Divisions</h6>
                         </div>
                         <ul>
-                            <li><a href="about.html">What We Do</a></li>
-                            <li><a href="contact.html">Request a Freight</a></li>
-                            <li><a href="services.html">Track & Trace</a></li>
-                            <li><a href="services.html">Rail Freight</a></li>
-                            <li><a href="services.html">Maritime Transport</a></li>
+                            <li><a href="{{route('about')}}">What We Do</a></li>
+                            <li><a href="{{route('contacts')}}">Request a Freight</a></li>
+                            <li><a href="{{route('contacts')}}">Track & Trace</a></li>
+                            <li><a href="{{route('contacts')}}">Rail Freight</a></li>
+                            <li><a href="{{route('contacts')}}">Maritime Transport</a></li>
                         </ul>
                     </div>
                 </div>
@@ -32,11 +32,11 @@
                             <h6>Our Services</h6>
                         </div>
                         <ul>
-                            <li><a href="#">What We Do</a></li>
-                            <li><a href="#">Request a Freight</a></li>
-                            <li><a href="#">Track & Trace</a></li>
-                            <li><a href="#">Rail Freight</a></li>
-                            <li><a href="#">Maritime Transport</a></li>
+                            <li><a href="{{route('about')}}">What We Do</a></li>
+                            <li><a href="{{route('contacts')}}">Request a Freight</a></li>
+                            <li><a href="{{route('contacts')}}">Track & Trace</a></li>
+                            <li><a href="{{route('contacts')}}">Rail Freight</a></li>
+                            <li><a href="{{route('contacts')}}">Maritime Transport</a></li>
                         </ul>
                     </div>
                 </div>
@@ -47,11 +47,11 @@
                             <h6>Industry Sectors</h6>
                         </div>
                         <ul>
-                            <li><a href="#">Electronics Industry</a></li>
-                            <li><a href="#">Manufacturing</a></li>
-                            <li><a href="#">Semicon & Solar</a></li>
-                            <li><a href="#">Oil & Gas Cargo</a></li>
-                            <li><a href="#">Energy & Chemicals</a></li>
+                            <li><a href="{{route('about')}}">What We Do</a></li>
+                            <li><a href="{{route('contacts')}}">Request a Freight</a></li>
+                            <li><a href="{{route('contacts')}}">Track & Trace</a></li>
+                            <li><a href="{{route('contacts')}}">Rail Freight</a></li>
+                            <li><a href="{{route('contacts')}}">Maritime Transport</a></li>
                         </ul>
                     </div>
                 </div>
@@ -109,7 +109,7 @@
                 <div class="row">
                     <div class="col-md-6 col-12">
                         <div class="copy-rights">
-                            <p>&copy;2022 <strong>Transland</strong>, All Rights Reserved</p>
+                            <p>&copy;2022-{{date('Y')}} <strong>Transland</strong>, All Rights Reserved</p>
                         </div>
                     </div>
                     <div class="col-md-6 mt-2 mt-md-0 col-12 text-md-end">

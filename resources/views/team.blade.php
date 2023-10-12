@@ -67,7 +67,7 @@
                                                     </div>
                                                 </div>
                                                 @auth
-                                                    <a href="{{url('edit/'. 4 . '/'. 5)}}" data-animation-in="fadeInRight" data-delay-in="0.8" class="theme-btn border-style me-sm-4 mt-4 animated" style="width: 100%; text-align: center">Edit</a>
+                                                    <a href="{{url('edit/'. 4 . '/'. $i)}}" data-animation-in="fadeInRight" data-delay-in="0.8" class="theme-btn border-style me-sm-4 mt-4 animated" style="width: 100%; text-align: center">Edit</a>
                                                 @endauth
                                             </div>
                                         @endif

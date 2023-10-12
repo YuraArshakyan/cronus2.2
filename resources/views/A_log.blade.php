@@ -19,7 +19,7 @@
             <div class="row pt-5">
                 <div class="block-contents mb-30 pt-60">
                     <div class="section-title text-center">
-                        <h2>Admin <span>dash</span></h2>
+                        <h2>Admin <span>console</span></h2>
                     </div>
                 </div>
                 <div class="col-12 col-lg-12">

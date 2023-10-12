@@ -68,6 +68,30 @@
                                             </div>
                                         @endif
                                     @endforeach
+                                        @foreach($config as $item)
+                                            @if($item->id == 5)
+                                                <div class="single-personal-info">
+                                                    <label for="fname">@if($item->id == 5){{$item->key}}@endif</label>
+                                                    <input type="text" id="fname" placeholder="Feedback email" name="value5" value="@if($item->id == 5){{$item->value}}@endif">
+                                                </div>
+                                            @endif
+                                        @endforeach
+                                        @foreach($config as $item)
+                                            @if($item->id == 6)
+                                                <div class="single-personal-info">
+                                                    <label for="fname">@if($item->id == 6){{$item->key}}@endif</label>
+                                                    <input type="text" id="fname" placeholder="Feedback email" name="value6" value="@if($item->id == 6){{$item->value}}@endif">
+                                                </div>
+                                            @endif
+                                        @endforeach
+                                        @foreach($config as $item)
+                                            @if($item->id == 7)
+                                                <div class="single-personal-info">
+                                                    <label for="fname">@if($item->id == 7){{$item->key}}@endif</label>
+                                                    <input type="text" id="fname" placeholder="Feedback email" name="value7" value="@if($item->id == 7){{$item->value}}@endif">
+                                                </div>
+                                            @endif
+                                        @endforeach
                                 </div>
                                 <div class="col-md-12 col-12 text-center mb-20">
                                     <button type="submit"><input class="submit-btn" type="submit" value="submit"></button>

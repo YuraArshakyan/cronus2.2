@@ -109,7 +109,7 @@
                 <div class="row">
                     <div class="col-md-6 col-12">
                         <div class="copy-rights">
-                            <p>&copy;2022-{{date('Y')}} <strong>Transland</strong>, All Rights Reserved</p>
+                            <p>&copy;2022-{{date('Y')}} <strong>Cronus</strong>, All Rights Reserved</p>
                         </div>
                     </div>
                     <div class="col-md-6 mt-2 mt-md-0 col-12 text-md-end">

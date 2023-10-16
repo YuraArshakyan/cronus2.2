@@ -108,7 +108,7 @@
                             <div class="profile-data mb-4">
                                 <h4>Nowrin Jaan</h4>
                                 <h6>Manager of Relationship Team</h6>
-                                <p>Head Office - Transland LTD</p>
+                                <p>Head Office - Cronus transportation INC.</p>
                             </div>
                             <div class="investors-contact">
                                 <p><i class="fal fa-phone-volume"></i> (+81) 324 56 789</p>

@@ -44,7 +44,6 @@
 </div>
 <div class="top-bar-wrapper d-none d-sm-block">
     <div class="container d-flex justify-content-between align-items-center">
-
         <div class="top-left">
             <a href="tel:987-098-098-09"><i class="fal fa-phone-volume">@foreach ($topbar[1] as $topbars[1]){{$topbars[1]->value}}@endforeach</i></a>
             <a href="mailto:info@example.com"><i class="fal fa-envelope">@foreach ($topbar[2] as $topbars[2]){{$topbars[2]->value}}@endforeach</i></a>

@@ -3693,13 +3693,13 @@ header .header-right-element .search-box form button:hover {
 
 .top-bar-wrapper .top-left a {
   color: #fff;
-  margin-right: 30px;
+  margin-right: 0px;
   font-size: 15px;
 }
 
 @media (max-width: 991px) {
   .top-bar-wrapper .top-left a {
-    margin-right: 10px;
+    margin-right: 0px;
   }
 }
 
@@ -3711,7 +3711,7 @@ header .header-right-element .search-box form button:hover {
 
 .top-bar-wrapper .top-left a i {
   color: #4ab9cf;
-  padding-right: 8px;
+  padding-right: 0px;
 }
 
 .top-bar-wrapper .social-pages a {

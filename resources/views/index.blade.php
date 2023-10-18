@@ -33,7 +33,7 @@
                                     <h1 class="fs-lg animated" data-animation-in="fadeInRight" data-delay-in="0.2">Innovative
                                         thing <span>Provide</span></h1>
                                     <p class="pe-lg-5 mb-4 animated" data-animation-in="fadeInRight" data-delay-in="0.5">We are committed to providing our customers with exceptional service while offering our employees </p>
-                                    <a href="{{route('contacts')}}" data-animation-in="fadeInRight" data-delay-in="0.8" class="theme-btn border-style me-sm-4 mt-4 animated">Track your order</a>
+                                    <a href="{{route('track')}}" data-animation-in="fadeInRight" data-delay-in="0.8" class="theme-btn border-style me-sm-4 mt-4 animated">Track your order</a>
                                 </div>
                             </div>
                         </div>

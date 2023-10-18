@@ -62,6 +62,16 @@ Route::get('/head', function () {
     return view('head', compact( 'config', 'topbar'));
 })->name('head');
 
+Route::get('/track', function () {
+    $config = configs::all();
+    $topbar = array(
+        1 => configs::where('id', 5)->get(),
+        2 => configs::where('id', 6)->get(),
+        3 => configs::where('id', 7)->get(),
+    );
+    return view('track', compact('config', 'topbar'));
+})->name('track');
+
 Route::get('/news', function () {
     $topbar = array(
         1 => configs::where('id', 5)->get(),

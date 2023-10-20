@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="modinatheme">
+    <meta name="author" content="cronus">
     <!-- ======== Page title ============ -->
     <title>Transland - Transport & Logistics HTML Template</title>
     <!-- ========== Favicon Icon ========== -->
@@ -107,7 +107,7 @@
                 <ul>
                     <li><span><i class="fal fa-map"></i></span>Rock St 12, Newyork City, USA</li>
                     <li><span><i class="fal fa-phone"></i></span>(000) 000-000-0000</li>
-                    <li><span><i class="fal fa-envelope"></i></span>info@modinatheme.com</li>
+                    <li><span><i class="fal fa-envelope"></i></span>info@*.com</li>
                     <li><span><i class="fal fa-clock"></i></span>Week Days: 09.00 to 18.00</li>
                     <li><span><i class="fal fa-clock"></i></span>Sunday: Closed</li>
                 </ul>

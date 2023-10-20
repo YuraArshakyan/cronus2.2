@@ -67,7 +67,7 @@
                                     <i class="fal fa-map-marker-alt"></i>
                                 </div>
                                 <div class="contact-info">
-                                    <span>94 Roa Malaka, West Jakarta City, UK</span>
+                                    <span>{{$config[6]->value}}</span>
                                 </div>
                             </div>
                             <div class="single-contact-info">
@@ -75,7 +75,7 @@
                                     <i class="fal fa-phone"></i>
                                 </div>
                                 <div class="contact-info">
-                                    <span>+91-7687287658</span>
+                                    <span>{{$config[4]->value}}</span>
                                 </div>
                             </div>
                             <div class="single-contact-info">
@@ -83,7 +83,7 @@
                                     <i class="fal fa-envelope"></i>
                                 </div>
                                 <div class="contact-info">
-                                    <span>info@example.com</span>
+                                    <span>{{$config[5]->value}}</span>
                                 </div>
                             </div>
                         </div>

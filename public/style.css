@@ -1,7 +1,7 @@
 /*
 Theme Name: Transland
 Author: Modina Theme
-Author URI: https://themeforest.net/user/modinatheme/
+Author URI: https://themeforest.net/user/cronus/
 Description: Transport & Logistics HTML  Template
 Version: 1.0.0
 */
@@ -11,7 +11,7 @@ Version: 1.0.0
 |***    Table of contents:   ***|
 =================================
 
-Main Style file-> assets/css/style.css 
+Main Style file-> assets/css/style.css
 
 All the SCSS File in SCSS Folder of Assets Folder. You can read the doc file also for better understand.
 
@@ -36,71 +36,71 @@ All the SCSS File in SCSS Folder of Assets Folder. You can read the doc file als
 // ANIMATION
 @import 'animation';
 
-// Button 
+// Button
 @import 'btn';
 
-// Colors 
+// Colors
 @import 'colors';
 
-// Preloader 
+// Preloader
 @import 'preloader';
 
 /* ----------------------------------
     Template Section Styles
  ------------------------------------*/
 
- /* // Menu - Header Section 
+ /* // Menu - Header Section
  @import 'header';
- 
- // Hero Slide - Section 
+
+ // Hero Slide - Section
  @import 'hero';
- 
- // Section Title - Heading 
+
+ // Section Title - Heading
  @import 'section';
- 
- // About - Section 
+
+ // About - Section
  @import 'about';
- 
- // Features - Section 
+
+ // Features - Section
  @import 'features';
- 
- // services - Section 
+
+ // services - Section
  @import 'services';
- 
- // testimonial - Section 
+
+ // testimonial - Section
  @import 'testimonial';
- 
- // Portfolio - Cases - Section 
+
+ // Portfolio - Cases - Section
  @import 'project';
- 
- // Price Table - Section 
+
+ // Price Table - Section
  @import 'price';
- 
- // Call To Action - Section 
+
+ // Call To Action - Section
  @import 'cta';
- 
- // Content Block - Section 
+
+ // Content Block - Section
  @import 'contentblock';
- 
- // team - Section 
+
+ // team - Section
  @import 'team';
- 
- // funfact - Section 
+
+ // funfact - Section
  @import 'funfact';
- 
- // Download - Section 
+
+ // Download - Section
  @import 'carousel';
- 
- // FAQ - Section 
+
+ // FAQ - Section
  @import 'faq';
- 
- // Blog - Section 
+
+ // Blog - Section
  @import 'blog';
- 
- // Contact Us - Section 
+
+ // Contact Us - Section
  @import 'contact';
- 
- // footer - Section 
+
+ // footer - Section
  @import 'footer';n facts */
 
 

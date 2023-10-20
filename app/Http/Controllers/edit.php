@@ -16,6 +16,7 @@ class edit extends Controller
         $photos = photos::all();
         $texts = texts::all();
         $title = titles::all();
+        $config = configs::all();
         $topbar = array(
             1 => configs::where('id', 5)->get(),
             2 => configs::where('id', 6)->get(),
@@ -29,7 +30,7 @@ class edit extends Controller
             'prices'
         );
 
-        return view('/edit',compact('id', 'count', 'slides', 'texts', 'photos', 'title', 'array', 'topbar'));
+        return view('/edit',compact('id', 'count', 'config', 'slides', 'texts', 'photos', 'title', 'array', 'topbar'));
     }
     public function update($id, $id2, Request $request){
         switch ($id){

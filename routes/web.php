@@ -40,7 +40,7 @@ Route::get('/contact', function () {
         2 => configs::where('id', 6)->get(),
         3 => configs::where('id', 7)->get(),
     );
-    $config = configs::where('id', 2)->get();
+    $config = configs::all();
     $config2 = configs::where('id', 3)->get();
     $texts = texts::all();
     $title = titles::all();

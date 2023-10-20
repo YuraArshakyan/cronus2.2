@@ -20,7 +20,7 @@
         <div class="container">
             <nav>
                 <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                  <li class="breadcrumb-item"><a href="/">Home</a></li>
                   <li class="breadcrumb-item active" aria-current="page">services</li>
                 </ol>
             </nav>
@@ -52,7 +52,7 @@
                                                         <div class="icon">
                                                             <i class="{{$icone[$i]}}"></i>
                                                         </div>
-                                                        <h3><a href="services-details.html">{{$titles->titles}}</a></h3>
+                                                        <h3>{{$titles->titles}}</h3>
                                                         <p>{{$text->text}}</p>
                                                     </div>
                                                 </div>

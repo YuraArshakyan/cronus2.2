@@ -119,9 +119,7 @@
 
     <section class="our-branch-wrapper section-padding pt-0">
         <div class="office-google-map-wrapper wow fadeInUp">
-            @foreach($config as $configs)
                 <iframe src="" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            @endforeach
         </div>
     </section>
 

@@ -23,7 +23,7 @@
                                             <div class="team-member-card bg-cover" style="background-image: url('assets/img/team/{{$photo->photos}}')">
                                                 <div class="profile-info-card">
                                                     <span>{{$titles->titles}}</span>
-                                                    <h5><a href="team-details.html">{{$text->text}}</a></h5>
+                                                    <h5>{{$text->text}}</h5>
                                                     <div class="social-link">
                                                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                                                         <a href="#"><i class="fab fa-twitter"></i></a>

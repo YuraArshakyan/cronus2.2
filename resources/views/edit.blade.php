@@ -1,36 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <!-- ========== Meta Tags ========== -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="modinatheme">
-    <!-- ======== Page title ============ -->
-    <title>Transland - Transport & Logistics HTML Template</title>
-    <!-- ========== Favicon Icon ========== -->
-    <link rel="shortcut icon" href="{{asset('/assets/img/favicon.ico')}}">
-    <!-- ===========  All Stylesheet ================= -->
-    <!--  Icon css plugins -->
-    <link rel="stylesheet" href="{{asset('assets/css/icons.css')}}">
-    <!--  animate css plugins -->
-    <link rel="stylesheet" href="{{asset('assets/css/animate.css')}}">
-    <!--  slick css plugins -->
-    <link rel="stylesheet" href="{{asset('assets/css/slick.css')}}">
-    <!--  magnific-popup css plugins -->
-    <link rel="stylesheet" href="{{asset('assets/css/magnific-popup.css')}}">
-    <!-- metis menu css file -->
-    <link rel="stylesheet" href="{{asset('assets/css/metismenu.css')}}">
-    <!-- select2 css file -->
-    <link rel="stylesheet" href="{{asset('assets/css/nice-select2.css')}}">
-    <!--  Bootstrap css plugins -->
-    <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
-    <!--  main style css file -->
-    <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
-    <!-- template main style css file -->
-    <link rel="stylesheet" href="{{asset('../../public/style.css')}}">
-</head>
+@include('common.head')
 
 <body class="body-wrapper">
 
